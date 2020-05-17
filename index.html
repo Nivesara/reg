@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Register</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script> 
+          
+            // Function to check Whether both passwords 
+            // is same or not. 
+            function checkPassword(form) { 
+                password1 = form.password.value; 
+                password2 = form.confirm_password.value; 
+  
+                // If password not entered 
+                if (password1 == '') 
+                    alert ("Please enter Password"); 
+                      
+                // If confirm password not entered 
+                else if (confirm_password == '') 
+                    alert ("Please enter confirm password"); 
+                      
+                // If Not same return False.     
+                else if (password != confirm_password) { 
+                    alert ("\nPassword did not match: Please try again...") 
+                    return false; 
+                } 
+  
+                // If same return True. 
+                else{ 
+                    alert("Password Match: Welcome to GeeksforGeeks!") 
+                    return true; 
+                } 
+            } 
+        </script> 
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+        <div class="reg">
+            <form method="post" id="reg" onSubmit = "return checkPassword(this)">
+                <h2>Register Here</h2>
+                <label>First Name :</label><br>
+                <input type="text" name="fnam" id="name" placeholder="Enter your First Name" required><br><br>
+                <label>Last Name :</label><br>
+                <input type="text" name="lnam" id="name" placeholder="Enter your Last Name" required><br><br>
+                <label>Number :</label><br>
+                <input type="tel" name="Mno" id="name"
+                placeholder="Enter your Mobile Number" required><br><br>
+                <label>Email :</label><br>
+                <input type="email" name="mail" id="name" placeholder="Enter your Mail id"><br><br>
+                <label>Password :</label><br>
+                <input type="password" name="password" id="password" placeholder="Enter your Password" required><br><br>
+                <label>Confirm Password :</label><br>
+                <input type="password" name="confirm_password" id="confirm_password"  placeholder="Enter your Password Again" required><br><br>
+                <label>Gender : </label><BR>
+                <input type="radio" name="male" id="male" ><span id="male">&nbsp; Male</span>&nbsp;&nbsp;
+                <input type="radio" name="male" id="male" ><span id="male">&nbsp; Female</span>&nbsp;&nbsp;
+                <input type="radio" name="male" id="male" ><span id="male">&nbsp; Others</span>&nbsp;&nbsp;
+                <br>
+                <br>
+                <label>How we make you happy?</label>
+                <input type="textarea" name="mail" id="name" placeholder="Enter your Suggestion"><br><br>
+                <input type="checkbox" id="ch"><span id="ch"> I Agree all terms & condition</span><br><br>
+                <input type="submit" value="Submit" id="sub"  >
+                
+
+
+            </form>
+        </div>
+    </body>
+</html>
